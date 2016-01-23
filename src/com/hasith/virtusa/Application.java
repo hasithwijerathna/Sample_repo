@@ -1,8 +1,6 @@
 package com.hasith.virtusa;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 /**
@@ -19,5 +17,17 @@ public class Application {
     @Produces(MediaType.TEXT_PLAIN)
     public String sayHello(){
         return "Hey Application... ";
+    }
+
+    /**
+     * for saving data
+     * @param data
+     * @return
+     */
+    @POST
+    @Path("save/{data}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String saveData(@PathParam("data") String data){
+        return  "Data is Saved";
     }
 }

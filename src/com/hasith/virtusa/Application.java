@@ -11,6 +11,9 @@ import javax.ws.rs.core.MediaType;
 @Path("/resource")
 public class Application {
 
+    /*
+    initial get method for invoke
+     */
     @GET
     @Path("/hello")
     @Produces(MediaType.TEXT_PLAIN)

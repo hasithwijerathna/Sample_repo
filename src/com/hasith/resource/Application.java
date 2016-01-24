@@ -1,4 +1,4 @@
-package com.hasith.virtusa;
+package com.hasith.resource;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -14,7 +14,7 @@ public class Application {
      */
     @GET
     @Path("/hello")
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.APPLICATION_JSON)
     public String sayHello(){
         return "Hey Application... ";
     }
@@ -26,9 +26,9 @@ public class Application {
      * @return
      */
     @POST
-    @Path("save/{data}")
+    @Path("/save/{data}")
     @Produces(MediaType.TEXT_PLAIN)
     public String saveData(@PathParam("data") String data){
-        return  "Data is Saved";
+        return  "Data is Saved "+ data;
     }
 }
